@@ -312,7 +312,11 @@ const data = [
 
 function CustomChart() {
   return (
-    <s-stack overflow="hidden" background="base">
+    <s-stack
+      overflow="hidden"
+      background="base"
+      borderRadius="none none base base"
+    >
       <div
         style={{
           width: "100%",
@@ -358,8 +362,195 @@ function CustomChart() {
 
 function PopupList() {
   return (
-    <s-section>
-      <s-heading>heloo</s-heading>
-    </s-section>
+    <s-stack padding="base none none">
+      <s-section>
+        <s-stack direction="inline" justifyContent="space-between">
+          <s-heading>Recent popup</s-heading>
+          <s-link href="#">View all popups</s-link>
+        </s-stack>
+
+        <s-stack padding="base none">
+          <s-table>
+            <s-table-header-row>
+              <s-table-header listSlot="name">Name</s-table-header>
+              <s-table-header>Status</s-table-header>
+              <s-table-header>Views</s-table-header>
+              <s-table-header>Conversion</s-table-header>
+              <s-table-header>Last edited</s-table-header>
+              <s-table-header></s-table-header>
+            </s-table-header-row>
+            <s-table-body>
+              {/* table row  */}
+              <s-table-row>
+                <s-table-cell>
+                  <s-text>Summer Sale Popup</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-badge tone="success">Active</s-badge>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>4,521</s-text>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>12.3%</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-text>2 hours ago</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <>
+                    <s-button
+                      commandFor="product-options-popover"
+                      icon="menu-horizontal"
+                    ></s-button>
+
+                    <s-popover id="product-options-popover">
+                      <s-stack direction="block">
+                        <s-button variant="tertiary">Edit</s-button>
+                        <s-button variant="tertiary">Rename</s-button>
+                        <s-button variant="tertiary">Duplicate</s-button>
+                        <s-button variant="tertiary" tone="critical">
+                          Delete
+                        </s-button>
+                      </s-stack>
+                    </s-popover>
+                  </>
+                </s-table-cell>
+              </s-table-row>
+              {/* table row  */}
+
+              {/* table row1  */}
+              <s-table-row>
+                <s-table-cell>
+                  <s-text>Welcome Discount 10%</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-badge>Draft</s-badge>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>3,812</s-text>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>9.8%</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-text>1 day ago</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <>
+                    <s-button
+                      commandFor="product-options-popover"
+                      icon="menu-horizontal"
+                    ></s-button>
+
+                    <s-popover id="product-options-popover">
+                      <s-stack direction="block">
+                        <s-button variant="tertiary">Edit</s-button>
+                        <s-button variant="tertiary">Rename</s-button>
+                        <s-button variant="tertiary">Duplicate</s-button>
+                        <s-button variant="tertiary" tone="critical">
+                          Delete
+                        </s-button>
+                      </s-stack>
+                    </s-popover>
+                  </>
+                </s-table-cell>
+              </s-table-row>
+              {/* table row  */}
+
+              {/* table row1  */}
+              <s-table-row>
+                <s-table-cell>
+                  <s-text>Exit Intent Offer</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-badge>Draft</s-badge>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>2,890</s-text>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>11.3%</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-text>3 days ago</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <>
+                    <s-button
+                      commandFor="product-options-popover"
+                      icon="menu-horizontal"
+                    ></s-button>
+
+                    <s-popover id="product-options-popover">
+                      <s-stack direction="block">
+                        <s-button variant="tertiary">Edit</s-button>
+                        <s-button variant="tertiary">Rename</s-button>
+                        <s-button variant="tertiary">Duplicate</s-button>
+                        <s-button variant="tertiary" tone="critical">
+                          Delete
+                        </s-button>
+                      </s-stack>
+                    </s-popover>
+                  </>
+                </s-table-cell>
+              </s-table-row>
+              {/* table row  */}
+
+              {/* table row4  */}
+              <s-table-row>
+                <s-table-cell>
+                  <s-text>Newsletter Signup</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-badge tone="success">Active</s-badge>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>1,521</s-text>
+                </s-table-cell>
+                <s-table-cell>
+                  <s-text>19.6%</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <s-text>1 week ago</s-text>
+                </s-table-cell>
+
+                <s-table-cell>
+                  <>
+                    <s-button
+                      commandFor="product-options-popover"
+                      icon="menu-horizontal"
+                    ></s-button>
+
+                    <s-popover id="product-options-popover">
+                      <s-stack direction="block">
+                        <s-button variant="tertiary">Edit</s-button>
+                        <s-button variant="tertiary">Rename</s-button>
+                        <s-button variant="tertiary">Duplicate</s-button>
+                        <s-button variant="tertiary" tone="critical">
+                          Delete
+                        </s-button>
+                      </s-stack>
+                    </s-popover>
+                  </>
+                </s-table-cell>
+              </s-table-row>
+              {/* table row  */}
+            </s-table-body>
+          </s-table>
+        </s-stack>
+      </s-section>
+    </s-stack>
   );
 }
