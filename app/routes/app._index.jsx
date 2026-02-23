@@ -1,5 +1,6 @@
 // for cart
 import React from "react";
+import { useState } from "react";
 import {
   LineChart,
   Line,
@@ -21,6 +22,7 @@ function Index() {
         <PerformanceOverview></PerformanceOverview>
         <CustomChart></CustomChart>
         <PopupList></PopupList>
+        <Faq></Faq>
       </s-page>
     </>
   );
@@ -549,6 +551,87 @@ function PopupList() {
               {/* table row  */}
             </s-table-body>
           </s-table>
+        </s-stack>
+      </s-section>
+    </s-stack>
+  );
+}
+
+// for faq section
+
+function Faq() {
+  const [openItems, setOpenItems] = useState([0]);
+
+  const faqData = [
+    {
+      question: "Why is my popup not showing?",
+      answer:
+        "Make sure app embed is enabled and your popup is published. You can check both in the setup guide above.",
+    },
+    {
+      question: "How do I improve popup conversion rate?",
+      answer: "Go to theme customize → app embeds → enable the app embed.",
+    },
+    {
+      question: "Where can I see collected emails?",
+      answer: "Yes, the popup is fully responsive and works on all devices.",
+    },
+    {
+      question: "Can I customize popup design?",
+      answer: "Yes, the popup is fully responsive and works on all devices.",
+    },
+  ];
+
+  const toggleItem = (index) => {
+    if (openItems.includes(index)) {
+      setOpenItems(openItems.filter((i) => i !== index));
+    } else {
+      setOpenItems([...openItems, index]);
+    }
+  };
+
+  return (
+    <s-stack padding="base none">
+      <s-section padding="base">
+        <s-heading>Frequently asked questions</s-heading>
+
+        <s-stack>
+          {faqData.map((item, index) => {
+            const isOpen = openItems.includes(index);
+
+            return (
+              <s-stack
+                key={index}
+                padding="base none"
+                borderWidth="none none base none"
+                border="base"
+              >
+                {/* heading */}
+
+                <div style={{ cursor: "pointer" }}>
+                  <s-stack
+                    direction="inline"
+                    justifyContent="space-between"
+                    onClick={() => toggleItem(index)}
+                  >
+                    <s-heading>{item.question}</s-heading>
+
+                    {isOpen ? (
+                      <s-icon type="caret-up"></s-icon>
+                    ) : (
+                      <s-icon type="caret-down"></s-icon>
+                    )}
+                  </s-stack>
+                </div>
+                {/* description */}
+                {isOpen && (
+                  <s-stack padding="base none none">
+                    <s-paragraph color="subdued">{item.answer}</s-paragraph>
+                  </s-stack>
+                )}
+              </s-stack>
+            );
+          })}
         </s-stack>
       </s-section>
     </s-stack>
