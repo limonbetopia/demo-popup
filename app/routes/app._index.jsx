@@ -20,6 +20,7 @@ function Index() {
         <ConversionRate></ConversionRate>
         <PerformanceOverview></PerformanceOverview>
         <CustomChart></CustomChart>
+        <PopupList></PopupList>
       </s-page>
     </>
   );
@@ -351,5 +352,14 @@ function CustomChart() {
         </ResponsiveContainer>
       </div>
     </s-stack>
+  );
+}
+// for popup list
+
+function PopupList() {
+  return (
+    <s-section>
+      <s-heading>heloo</s-heading>
+    </s-section>
   );
 }
