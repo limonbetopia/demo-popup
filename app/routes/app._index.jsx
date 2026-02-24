@@ -23,6 +23,7 @@ function Index() {
         <CustomChart></CustomChart>
         <PopupList></PopupList>
         <Faq></Faq>
+        <Help></Help>
       </s-page>
     </>
   );
@@ -635,5 +636,107 @@ function Faq() {
         </s-stack>
       </s-section>
     </s-stack>
+  );
+}
+
+// for use guid section
+function Help() {
+  return (
+    <s-section>
+      <s-stack>
+        <s-heading>Need help?</s-heading>
+      </s-stack>
+
+      <s-stack padding="base none">
+        <s-grid gridTemplateColumns="repeat(3, 1fr)" gap="base">
+          {/* one  */}
+
+          <s-grid-item gridColumn="span 1">
+            <s-link href="#">
+              <s-stack
+                direction="inline"
+                gap="small"
+                border="base"
+                padding="base"
+                borderRadius="large"
+              >
+                <s-stack
+                  background="strong"
+                  padding="small"
+                  borderRadius="base"
+                >
+                  <s-icon type="question-circle" />
+                </s-stack>
+
+                <s-stack>
+                  <s-heading>Help center</s-heading>
+                  <s-paragraph color="subdued">
+                    Browse guides and tutorials
+                  </s-paragraph>
+                </s-stack>
+              </s-stack>
+            </s-link>
+          </s-grid-item>
+
+          {/* two  */}
+
+          <s-grid-item gridColumn="span 1">
+            <s-link href="#">
+              <s-stack
+                direction="inline"
+                gap="small"
+                border="base"
+                padding="base"
+                borderRadius="large"
+              >
+                <s-stack
+                  background="strong"
+                  padding="small"
+                  borderRadius="base"
+                >
+                  <s-icon type="chat" />
+                </s-stack>
+
+                <s-stack>
+                  <s-heading>Contact support</s-heading>
+                  <s-paragraph color="subdued">
+                    Get help from our team
+                  </s-paragraph>
+                </s-stack>
+              </s-stack>
+            </s-link>
+          </s-grid-item>
+
+          {/* three  */}
+
+          <s-grid-item gridColumn="span 1">
+            <s-link href="#">
+              <s-stack
+                direction="inline"
+                gap="small"
+                border="base"
+                padding="base"
+                borderRadius="large"
+              >
+                <s-stack
+                  background="strong"
+                  padding="small"
+                  borderRadius="base"
+                >
+                  <s-icon type="note" />
+                </s-stack>
+
+                <s-stack>
+                  <s-heading>Documentation</s-heading>
+                  <s-paragraph color="subdued">
+                    API reference and docs
+                  </s-paragraph>
+                </s-stack>
+              </s-stack>
+            </s-link>
+          </s-grid-item>
+        </s-grid>
+      </s-stack>
+    </s-section>
   );
 }
