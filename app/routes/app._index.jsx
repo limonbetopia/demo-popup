@@ -14,7 +14,7 @@ import {
 function Index() {
   return (
     <>
-      <s-page heading="Products">
+      <s-page heading="Demo popup">
         <Top></Top>
         <QuickSetup></QuickSetup>
         <AppStatus></AppStatus>
